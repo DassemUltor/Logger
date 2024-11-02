@@ -1,9 +1,12 @@
 package com.maxima.homework.task_5;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+@Slf4j
 public class Main {
 
 
@@ -19,9 +22,9 @@ public class Main {
             }
         }
         if (isOrdered) {
-            System.out.println("The list is ordered");
+            log.info("The list is ordered");
         } else {
-            System.out.println("The list is not ordered. Index of the first breaking element: " + index);
+            log.info("The list is not ordered. Index of the first breaking element: {}", index);
         }
     }
 
@@ -33,6 +36,7 @@ public class Main {
             list.add(console.nextLine());
         }
         checks(list);
+
         console.close();
     }
 }
