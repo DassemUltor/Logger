@@ -1,10 +1,13 @@
 package com.maxima.homework.task_4;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Stream;
 
+@Slf4j
 public class Main {
 
 
@@ -24,7 +27,7 @@ public class Main {
         for (int i = 0; i < 10; i++) {
             list.add(console.nextLine());
         }
-        System.out.println(doubleValues(list));
+        doubleValues(list).forEach(log::info);
 
         console.close();
     }

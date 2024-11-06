@@ -1,9 +1,12 @@
 package com.maxima.homework.task_2;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Stream;
 
+@Slf4j
 public class Main {
 
 
@@ -16,7 +19,7 @@ public class Main {
         List<String> result = list.stream()
                 .flatMap(str -> Stream.of(str, "именно"))
                 .toList();
-        result.forEach(System.out::println);
+        result.forEach(log::info);
 
     }
 }

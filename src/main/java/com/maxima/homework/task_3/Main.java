@@ -1,8 +1,11 @@
 package com.maxima.homework.task_3;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.ArrayList;
 import java.util.List;
 
+@Slf4j
 public class Main {
 
     public static List<String> fix(List<String> list) {
@@ -26,7 +29,7 @@ public class Main {
         strings.add("роза");
         strings.add("лоза");
         strings.add("лира");
-        fix(strings).forEach(System.out::println);
+        fix(strings).forEach(log::info);
 
     }
 }
